@@ -6,13 +6,13 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:57:43 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/27 21:01:05 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:23:04 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *memset(void *s1, int c, size_t n)
+void *ft_memset(void *s1, int c, size_t n)
 {
 	char *p;
 	p = s1;
@@ -33,7 +33,7 @@ int main(void)
 	//printf("%d"memset(str,'B',sizeof(as1) - 1);
 	
 	   char str[20];
-    memset(str, 'A', sizeof(str) - 1);  // 最後の1バイトは\0用に残すにゃ
+    ft_memset(str, 'A', sizeof(str) - 1);  // 最後の1バイトは\0用に残すにゃ
     str[sizeof(str) - 1] = '\0';  // 文字列の終端を設定するにゃ
     printf("例1: %s\n", str);
 }

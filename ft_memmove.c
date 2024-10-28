@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 18:52:11 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/26 19:28:30 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/10/28 16:23:43 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/10/28 17:22:50 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <string.h>
 
-int ft_isdigit(int c)
+void *ft_memset(void *s, int c, size_t n)
 {
-	return(c >= '0' && c <= '9');
+	
 }
