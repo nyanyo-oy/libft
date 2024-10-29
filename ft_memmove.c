@@ -6,13 +6,13 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:23:43 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/28 17:22:50 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/10/29 20:36:21 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *ft_memset(void *s, int c, size_t n)
-{
+//void *ft_memset(void *s, int c, size_t n)
+//{
 	
-}
+//}
