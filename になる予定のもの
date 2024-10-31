@@ -1,8 +1,7 @@
 #object
 *.o
 
-#shell_scripts
-/create_files.sh
+create_files.sh
 
 #testers
 /libftTseter/
