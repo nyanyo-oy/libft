@@ -6,7 +6,7 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:23:43 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/31 23:11:51 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/02 23:00:04 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void *memmove(void *dest0, const void *src0, size_t n)
 {
 	char *dest ;
-	char const *src;
+	char const *src = src0;
+	
 	if(src < dest)
 	{
 		src += n;

@@ -6,17 +6,32 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 21:25:32 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/31 23:15:27 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/02 22:56:14 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	ft_strlcpy(char *dst0, const char *src0, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	char *dest;
-	char const *src;
+	char *d = dst;
+	char const *s = src;
+	size_t n = size;
 	
-	
-	while()
+	if(n != 0)
+	{
+		while(--n)
+		{
+			*d = *s;
+			d++;
+			s++;
+		}
+	}
+	if(n == 0)
+	{
+		*d = '\0';
+		while(*s)
+			s++;
+	}
+	return(src - s - 1);
 }
