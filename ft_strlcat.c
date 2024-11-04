@@ -6,34 +6,41 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 18:57:07 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/02 23:18:54 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:12:12 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
+#include "libft.a"
 #include <string.h>
-size_t ft_strlen(const char *str)
+
+size_t	ft_strlen(const char *str)
 {
-	const char *s1;
-	while(*s1)
+	const char	*s1 = str;
+	while (*s1)
 		s1++;
-	return(s1 - str);
+	return (s1 - str);
 }
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+
+size_t	ft_strlcat(char	*dst, const char *src, size_t size)
 {
-	char *d = dst;
-	const char *s = src;
-	size_t n;
-	size_t dlen;
+	char	*d;
+	const char	*s = src;
+	size_t	n;
+	size_t	dlen;
+	d = dst;
+	n = size;
 	
-	while(*dst != '\0' && --n != 0)	
+	while (*dst != '\0' && --n != 0)	
 		d++;
 	dlen = d - dst;
 	n = size - dlen;
-	if(n == 0)
-		return(dlen + strlen(s));
-	while(*s)
+	if (n == 0)
+		return (dlen + strlen(s));
+	while (*s)
 	{
-		if(n != 1) //////////
+		if (n != 1)
 		{
 			*d = *s;
 			d++;
@@ -42,36 +49,30 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 		s++;
 	}
 	*d = '\0';
-
-	return(dlen + (s - src));
+	return (dlen + (s - src));
 }
 int main()
 {
     char dst[20];
 
     // テストケース1: 通常のケース
-    strcpy(dst, "Hello ");
-    ft_strlcat(dst, "World!", 20, "Normal case");
+    ft_strlcat(dst, "World!", 20);
 
     // テストケース2: dstがいっぱいの場合
-    strcpy(dst, "1234567890123456789");
-    ft_strlcat(dst, "overflow", 20, "Full dst");
+    ft_strlcat(dst, "overflow", 20);
 
     // テストケース3: sizeが小さい場合
-    strcpy(dst, "Hello");
-    ft_strlcat(dst, " World!", 8, "Small size");
+    ft_strlcat(dst, " World!", 8);
 
     // テストケース4: 空の文字列を追加
-    strcpy(dst, "Hello");
-    ft_strlcat(dst, "", 20, "Empty src");
+    ft_strlcat(dst, "", 20);
 
     // テストケース5: 空のdstに追加
     dst[0] = '\0';
-    ft_strlcat(dst, "Hello", 20, "Empty dst");
+    ft_strlcat(dst, "Hello", 20);
 
     // テストケース6: sizeが0の場合
-    strcpy(dst, "Hello");
-    ft_strlcat(dst, "World", 0, "Zero size");
+    ft_strlcat(dst, "World", 0);
 
     return 0;
 }

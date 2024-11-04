@@ -6,10 +6,13 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:50:32 by kensei            #+#    #+#             */
-/*   Updated: 2024/10/31 22:19:12 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:12:08 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
+#include "libft.a"
 #include <string.h>
 size_t ft_strlen(const char *str)
 {

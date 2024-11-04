@@ -6,10 +6,11 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:21:12 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/26 19:31:03 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:05:00 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.a"
 #include <ctype.h>
 
 int ft_isascii(int c)

@@ -6,10 +6,11 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:14:10 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/26 19:25:47 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:04:52 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.a"
 #include <ctype.h>
 int ft_isalnum(int c)
 {

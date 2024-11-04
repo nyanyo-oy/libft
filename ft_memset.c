@@ -6,10 +6,13 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:57:43 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/29 14:29:44 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:12:27 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
+#include "libft.a"
 #include <string.h>
 
 void *ft_memset(void *s1, int c, size_t n)

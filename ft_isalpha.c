@@ -6,10 +6,11 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 02:19:40 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/29 19:59:45 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:04:55 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.a"
 #include <ctype.h>
 int	ft_isalpha(int c)
 {

@@ -6,10 +6,11 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:52:11 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/10/28 17:34:36 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:05:04 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.a"
 #include <ctype.h>
 
 int ft_isdigit(int c)
