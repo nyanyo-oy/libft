@@ -1,25 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 17:54:56 by kensei            #+#    #+#             */
-/*   Updated: 2024/11/04 23:05:09 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/10/31 23:17:26 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/11/08 13:39:55 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
-#include <ctype.h>
-
-int ft_isprint(int c)
-{
-	return(c >= 40 && c <= 176);
-}
-
-int main(void)
-{
-	int p = 'a';
-	isprint(p);
-}
+#include "libft.h"

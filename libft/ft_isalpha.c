@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 21:25:32 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/04 23:11:50 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/10/22 02:19:40 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/11/08 13:38:00 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-#include "libft.a"
-#include <string.h>
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_isalpha(int c)
 {
-	char *d = dst;
-	char const *s = src;
-	size_t n = size;
-	
-	if(n != 0)
-	{
-		while(--n)
-		{
-			*d = *s;
-			d++;
-			s++;
-		}
-	}
-	if(n == 0)
-	{
-		*d = '\0';
-		while(*s)
-			s++;
-	}
-	return(src - s - 1);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

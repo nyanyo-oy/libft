@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 02:19:40 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/04 23:04:55 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/10/23 19:21:12 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/11/08 13:38:22 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
-#include <ctype.h>
-int	ft_isalpha(int c)
-{
-	return((c >= 'a' && c <= 'z')||(c >= 'A' && c <= 'Z'));
-}
+#include "libft.h"
 
+int	ft_isascii(int c)
+{
+	return (c >= 0 && c <= 177);
+}

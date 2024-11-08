@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 18:52:11 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/04 23:05:04 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/11/04 23:08:14 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/11/08 10:17:09 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
-#include <ctype.h>
+#include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_tolower(int c)
 {
-	return(c >= '0' && c <= '9');
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

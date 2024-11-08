@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 21:50:32 by kensei            #+#    #+#             */
-/*   Updated: 2024/11/04 23:12:08 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/10/31 21:25:32 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/11/08 13:59:58 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-#include "libft.a"
-#include <string.h>
-size_t ft_strlen(const char *str)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	const char	*s = str;
-	while(*s)
-		s++;
-	return(s - str);
-}
-#include <stdio.h>
-int main(void)
-{
-	char str[6] = "Hello";
-	printf("%zu\n", ft_strlen(&str[1]));
+	char		*d;
+	char const	*s = src;
+	size_t		n;
+
+	d = dst;
+	n = size;
+	if (n != 0)
+	{
+		while (--n)
+		{
+			*d = *s;
+			d++;
+			s++;
+		}
+	}
+	if (n == 0)
+	{
+		*d = '\0';
+		while (*s)
+			s++;
+	}
+	return (src - s - 1);
 }

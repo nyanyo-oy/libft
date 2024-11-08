@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 19:21:12 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/04 23:05:00 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/10/25 17:54:56 by kensei            #+#    #+#             */
+/*   Updated: 2024/11/08 13:39:38 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
-#include <ctype.h>
+#include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isprint(int c)
 {
-	return(c >= 0 && c <= 177);
+	return (c >= 40 && c <= 176);
 }
+
+//int main(void)
+//{
+//	int p = 'a';
+//	ft_isprint(p);
+//}
