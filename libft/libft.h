@@ -6,7 +6,7 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:16:07 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/08 14:16:11 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:09:54 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ int 				ft_isprint(int c);
 void 				*ft_memmove(void *dest0, const void *src0, size_t n);
 void 				*ft_memset(void *s1, int c, size_t n);
 //
-size_t				ft_strlen(const char *str);
+
 size_t				ft_strlcat(char	*dst, const char *src, size_t size);
+	size_t				ft_strlen(const char *str);
 //
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t 				ft_strlen(const char *str);
-//
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 //
 //
 //
