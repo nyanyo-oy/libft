@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 18:51:35 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/25 12:31:24 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/11/25 12:36:59 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/11/25 14:43:08 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	i;
-	int	sign;
-	int result;
+	void	*p;
+	size_t	total;
 
-	i = 0;
-	sign = 1;
-	result = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = (result * 10) + (str[i] - '0');
-		i++;
-	}
-	return (result * sign);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	total = size * nmemb;
+	if (total / nmemb != size)
+		return (NULL);
+	if (p = malloc(total))
+		ft_bzero(p, total);
+	return (p);
 }
-
