@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 21:25:32 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/25 22:49:04 by kenakamu         ###   ########.fr       */
+/*   Created: 2024/11/25 18:33:31 by kenakamu          #+#    #+#             */
+/*   Updated: 2024/11/25 21:11:24 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*d;
-	char const	*s = src;
-	size_t		n;
-
-	d = dst;
-	n = size;
-	if (n != 0)
-	{
-		while (n)
-		{
-			*d = *s;
-			d++;
-			s++;
-			n--;
-		}
-	}
-	if (n == 0)
-	{
-		*d = '\0';
-		while (*s)
-			s++;
-	}
-	return (s - src  - 1);
+	char *str;
+	
+	if (!s)
+		return (NULL);
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	str = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s, len + 1);
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:16:07 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/25 16:56:06 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/25 21:07:55 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,7 @@ int	ft_toupper(int c);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 char *ft_strdup(const char *s);
+
+char *ft_substr(char const *s, unsigned int start, size_t len);
+
 #endif
