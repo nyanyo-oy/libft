@@ -6,7 +6,7 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:16:07 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/25 15:04:29 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:56:06 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
-#endif 
+
+void	*ft_calloc(size_t nmemb, size_t size);
+char *ft_strdup(const char *s);
+#endif
