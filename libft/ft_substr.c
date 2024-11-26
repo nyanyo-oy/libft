@@ -6,7 +6,7 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:33:31 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/25 21:11:24 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/11/26 21:50:40 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	
+	char	*str;
+	unsigned int	i;
+
 	if (!s)
 		return (NULL);
 	if (len > ft_strlen(s + start))

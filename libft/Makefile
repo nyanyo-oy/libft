@@ -1,7 +1,6 @@
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+#Library = libft
 
-SRCS = 	ft_isalnum.c 			\
+SRCS = 	ft_isalnum.c \
 						ft_isdigit.c	\
 						ft_memcmp.c		\
 						ft_memset.c 	\
@@ -26,6 +25,8 @@ SRCS = 	ft_isalnum.c 			\
 								ft_strdup.c \
 								ft_substr.c 
 
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
 NAME = libft.a
