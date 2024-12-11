@@ -1,4 +1,16 @@
-#Library = libft
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kensei <kensei@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/12/03 18:15:26 by kensei            #+#    #+#              #
+#    Updated: 2024/12/11 16:15:14 by kensei           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = libft.a
 
 SRCS = 	ft_isalnum.c \
 						ft_isdigit.c	\
@@ -10,7 +22,6 @@ SRCS = 	ft_isalnum.c \
 						ft_atoi.c		\
 						ft_isalpha.c 	\
 						ft_isprint.c 	\
-						ft_memcpy.c 	\
 						ft_memmove.c 	\
 						ft_strlcat.c 	\
 						ft_strncmp.c 	\
@@ -23,21 +34,40 @@ SRCS = 	ft_isalnum.c \
 							ft_memchr.c \
 							ft_calloc.c \
 								ft_strdup.c \
-								ft_substr.c 
+								ft_substr.c \
+								ft_strjoin.c \
+								ft_strtrim.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-OBJS = $(SRCS:.c=.o)
-NAME = libft.a
+#OBJDIR
+OBJDIR = OBJS
+OBJS = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
+all: $(OBJDIR) $(NAME) 
 
-all: $(NAME)
+
+#OBJS = $(SRCS:.c=.o)
+#all: $(NAME)
+
+
+#OBJDIR
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	# object file を リンクするだけ（オブジェクトファイルをつなぎ合わせたライブラリを作ってるイメージ
+	# ライブラリなので、実行できません）
 
-%.o: %.c
+#OBJDIR
+$(OBJDIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+	# object file の生成
+
+#%.o: %.c
+#	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
