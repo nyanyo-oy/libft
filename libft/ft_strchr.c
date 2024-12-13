@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 23:07:34 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/08 12:21:53 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/12/14 00:59:57 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (c != *s)
+	while (1)
 	{
-		if (*s == '\0')
-			return (NULL);
+		if (*s == (char)c)
+			return ((char *)s);
+		if (!*s)
+			break;
 		s++;
 	}
-	return ((char *)s);
+	return (NULL);
 }
 //int main(void)
 //{

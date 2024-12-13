@@ -3,53 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 18:57:07 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/08 13:55:59 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/12/14 04:42:11 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	const char	*s1 = str;
-
-	while (*s1)
-		s1++;
-	return (s1 - str);
-}
-
 size_t	ft_strlcat(char	*dst, const char *src, size_t size)
 {
-	char		*d;
-	const char	*s = src;
-	size_t		n;
-	size_t		dlen;
-
-	d = dst;
-	n = size;
-	while (*dst != '\0' && n-- != 0)
-		d++;
-	dlen = d - dst;
-	n = size - dlen;
-	if (n == 0)
-		return (dlen + (size_t)ft_strlen(s));
-	while (*s)
-	{
-		if (n != 1)
-		{
-			*d = *s;
-			d++;
-			n--;
-		}
-		s++;
-	}
-	*d = '\0';
-	return (dlen + (size_t)(s - src));
+	size_t	dlen;
+	size_t	slen;
+	
+	slen = ft_strlen(src);
+	if (size == 0)
+		return (slen);
+	dlen = ft_strlen(dst);
+	if (dlen >= size)
+		return (size + slen);
+	size_t	cpy_len = size - dlen - 1;
+	if (cpy_len > 0)
+		ft_strlcpy (dst + dlen, src, cpy_len + 1);
+	return (dlen + slen);
 }
-//int main()
+//int main(void)
 //{
 //    char dst[20];
 

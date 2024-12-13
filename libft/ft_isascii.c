@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:21:12 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/11/08 13:38:22 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/12/13 23:58:26 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isascii(int c)
 {
-	return (c >= 0 && c <= 177);
+	return (0 <= c && c < 128);
 }

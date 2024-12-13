@@ -6,7 +6,7 @@
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:50:32 by kensei            #+#    #+#             */
-/*   Updated: 2024/12/11 06:37:55 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/14 01:20:49 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ size_t	ft_strlen(const char *str)
 {
 	const char	*s = str;
 
-	while (*s++)
-		;
+	while (*s)
+		s++;
 	return (s - str);
 }
 //int main(void)
