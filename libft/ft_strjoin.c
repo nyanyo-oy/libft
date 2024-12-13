@@ -6,7 +6,7 @@
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 22:42:14 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/03 17:31:35 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/13 00:47:57 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		*dst = *s1;
 		s1++;
-		dst++;	
+		dst++;
 	}
 	while (*s2 != '\0')
 	{
@@ -35,5 +35,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	if (*s2 == '\0')
 		*dst = '\0';
-	return (result);	
+	return (result);
 }

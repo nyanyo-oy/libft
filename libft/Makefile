@@ -6,7 +6,7 @@
 #    By: kensei <kensei@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 18:15:26 by kensei            #+#    #+#              #
-#    Updated: 2024/12/11 16:15:14 by kensei           ###   ########.fr        #
+#    Updated: 2024/12/11 18:25:11 by kensei           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRCS = 	ft_isalnum.c \
 								ft_strdup.c \
 								ft_substr.c \
 								ft_strjoin.c \
-								ft_strtrim.c
+								#ft_strtrim.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -58,13 +58,13 @@ $(OBJDIR):
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	# object file を リンクするだけ（オブジェクトファイルをつなぎ合わせたライブラリを作ってるイメージ
-	# ライブラリなので、実行できません）
+	#object file を リンクするだけ（オブジェクトファイルをつなぎ合わせたライブラリを作ってるイメージ
+	#ライブラリなので、実行できません）
 
 #OBJDIR
 $(OBJDIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-	# object file の生成
+	#object file の生成
 
 #%.o: %.c
 #	$(CC) $(CFLAGS) -c $< -o $@

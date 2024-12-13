@@ -6,7 +6,7 @@
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:36:59 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/11 07:47:18 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/13 00:57:21 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	return (p);
 }
-//Error: ASSIGN_IN_CONTROL    (line:  25, col:  12):      Assignment in control structure
