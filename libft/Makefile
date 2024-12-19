@@ -6,7 +6,7 @@
 #    By: kensei <kensei@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 18:15:26 by kensei            #+#    #+#              #
-#    Updated: 2024/12/14 06:04:55 by kensei           ###   ########.fr        #
+#    Updated: 2024/12/19 16:02:50 by kensei           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,12 +32,15 @@ SRCS = 	ft_isalnum.c \
 						ft_bzero.c 		\
 						ft_memcpy.c		\
 						ft_isascii.c 	\
-							ft_memchr.c \
-							ft_calloc.c \
-								ft_strdup.c \
-								ft_substr.c \
-								ft_strjoin.c \
-								ft_strtrim.c
+							ft_memchr.c	\
+							ft_calloc.c	\
+								ft_strdup.c		\
+								ft_substr.c		\
+								ft_strjoin.c	\
+								ft_strtrim.c	\
+								ft_split.c		\
+								ft_itoa.c
+
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
