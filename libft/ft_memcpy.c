@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:09:28 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/20 09:26:21 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 15:12:59 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-//int	main(void)
-//{
-//	char	dest[10] = "dabcddd";
-//	const char	src[] = "Apple";
-
-//	printf("%s\n",(unsigned char *)(ft_memcpy
-//		((void *)dest,(const void *)src,4)));
-//}

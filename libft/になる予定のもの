@@ -1,7 +1,0 @@
-#object
-*.o
-
-create_files.sh
-
-#testers
-/libftTseter/

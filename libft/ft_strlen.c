@@ -3,26 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:50:32 by kensei            #+#    #+#             */
-/*   Updated: 2024/12/14 01:20:49 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 14:04:01 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
-	const char	*s = str;
+	size_t	len;
 
-	while (*s)
+	len = 0;
+	while(*s)
+	{
 		s++;
-	return (s - str);
+		len++;
+	}
+	return (len);
 }
-//int main(void)
-//{
-//	char str[6] = "Hello";
-//	printf("%zu\n", ft_strlen(&str[1]));
-//}
-/*((s - str + 1) - 1) <-minus1'\0' */

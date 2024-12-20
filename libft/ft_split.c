@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 07:10:42 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/20 09:31:41 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 13:27:16 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -28,19 +28,19 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-int	getlen(char const *s, char c)
+static int	getlen(char const *s, char c)
 {
 	char	const *s0 = s;
-	
+
 	while (*s && *s != c)
 		s++;
 	return (s - s0);
 }
 
-char	**free_return(char **p,int i)
+static char	**free_return(char **p, int i)
 {
 	int	love;
-	
+
 	love = 0;
 	while (love < i)
 	{
@@ -51,7 +51,7 @@ char	**free_return(char **p,int i)
 	return (NULL);
 }
 
-char **ft_split (char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**p;
 	int		i;
@@ -69,7 +69,7 @@ char **ft_split (char const *s, char c)
 	{
 		while (s[j] == c)
 			j++;
-		word_len = getlen(&s[j],c);
+		word_len = getlen(&s[j], c);
 		p[i] = ft_substr(s, j, word_len);
 		if (!p[i])
 			return (free_return(p, i));
@@ -77,33 +77,5 @@ char **ft_split (char const *s, char c)
 		i++;
 	}
 	p[i] = NULL;
-	return (p);	
+	return (p);
 }
-
-//int	main(void)
-//{
-//	char const str[] = "aaaaa apple  love i love apple";
-//	char delimiter = ' ';
-//	char **result;
-//	int i;
-
-//	result = ft_split(str, delimiter);
-
-//	if (!result)
-//	{
-//		printf("Error: Memory allocation failed.\n");
-//		return (1);
-//	}
-
-//	i = 0;
-//	while (result[i])
-//	{
-//		printf("Word %d: %s\n", i + 1, result[i]);
-//		free(result[i]); // メモリ解放
-//		i++;
-//	}
-//	free(result); // メモリ解放
-
-//	return (0);
-//}
-

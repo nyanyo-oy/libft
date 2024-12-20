@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 21:52:41 by kensei            #+#    #+#             */
-/*   Updated: 2024/12/20 09:41:49 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 16:44:43 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	isminus(n)
+{
+	if (n < 0)
+		return (1);
+	else
+		return (0);
+}
 
 static int	ft_numlen(int n)
 {
@@ -34,10 +42,9 @@ char	*ft_itoa(int n)
 	int		minus;
 	int		digit;
 
-	if (n < 0)
-		minus = 1;
-	else
-		minus = 0;
+	//if (n == -2147483648)
+	//	return (ft_strdup("-2147483648"));
+	minus = isminus(n);
 	numlen = minus + ft_numlen(n);
 	str = (char *)calloc(numlen + 1, sizeof(char));
 	if (!str)
@@ -57,48 +64,12 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-//int strings_are_equal(const char *s1, const char *s2)
-//{
-//    while (*s1 && *s2)
-//    {
-//        if (*s1 != *s2)
-//            return 0; // 異なる場合
-//        s1++;
-//        s2++;
-//    }
-//    return (*s1 == '\0' && *s2 == '\0'); // 両方が終端文字なら一致
-//}
-// テスト関数
-//void test_ft_itoa(int n, const char *expected)
-//{
-//    char *result = ft_itoa(n);
 
-//    // 結果を表示
-//    printf("Input: %d\n", n);
-//    printf("Expected: %s\n", expected);
-//    printf("Result:   %s\n", result);
-
-//    // 結果の検証
-//    if (result && strings_are_equal(result, expected))
-//        printf("Test passed!\n");
-//    else
-//        printf("Test failed!\n");
-
-//    printf("-------------------\n");
-
-//    // メモリ解放（ft_itoa 内で動的メモリ確保されている場合）
-//    if (result)
-//        free(result);
-//}
-
-//int main(void)
-//{
-//    // テストケース
-//    test_ft_itoa(0, "0");                 // 0 のテスト
-//    test_ft_itoa(123, "123");             // 正の数のテスト
-//    test_ft_itoa(-456, "-456");           // 負の数のテスト
-//    test_ft_itoa(2147483647, "2147483647"); // INT_MAX のテスト
-//    test_ft_itoa(-2147483648, "-2147483648"); // INT_MIN のテスト
-
-//    return 0;
-//}
+#include <stdio.h>
+int main(void)
+{
+	int	i;
+	i = 2147483648;
+	printf ("%s\n",ft_itoa(i));
+    return 0;
+}

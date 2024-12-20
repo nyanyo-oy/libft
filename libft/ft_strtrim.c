@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 04:42:09 by kensei            #+#    #+#             */
-/*   Updated: 2024/12/20 09:43:37 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 13:46:36 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[len] = '\0';
 	return (res);
 }
-
-//int	main (void)
-//{
-//	const char	*str = "Pineapple";
-//	const char	*trim = "apple";
-//	char	*result;
-
-//	result = ft_strtrim(str,trim);
-//	printf ("%s\n", result);
-//	free (result);
-//}

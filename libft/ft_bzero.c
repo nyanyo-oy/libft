@@ -6,17 +6,17 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:37:54 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/14 07:04:22 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/12/20 13:20:05 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s1, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*p;
 
-	p = s1;
+	p = s;
 	while (n)
 	{
 		*p = '\0';
