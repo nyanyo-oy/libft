@@ -6,7 +6,7 @@
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 18:57:07 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/14 04:42:11 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 09:34:33 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@ size_t	ft_strlcat(char	*dst, const char *src, size_t size)
 {
 	size_t	dlen;
 	size_t	slen;
-	
+	size_t	cpy_len;
+
 	slen = ft_strlen(src);
 	if (size == 0)
 		return (slen);
 	dlen = ft_strlen(dst);
 	if (dlen >= size)
 		return (size + slen);
-	size_t	cpy_len = size - dlen - 1;
+	cpy_len = size - dlen - 1;
 	if (cpy_len > 0)
 		ft_strlcpy (dst + dlen, src, cpy_len + 1);
 	return (dlen + slen);

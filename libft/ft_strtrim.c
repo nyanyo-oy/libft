@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 04:42:09 by kensei            #+#    #+#             */
-/*   Updated: 2024/12/14 07:09:01 by kenakamu         ###   ########.fr       */
+/*   Updated: 2024/12/20 09:43:37 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*head = s1;
 	const char	*tail;
 	size_t		len;
 	char		*res;
-	
-	
+
 	if (!s1 ||!set)
 		return (NULL);
 	tail = s1 + ft_strlen(s1) - 1;
@@ -35,7 +34,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	res[len] = '\0';
 	return (res);
 }
-	
+
 //int	main (void)
 //{
 //	const char	*str = "Pineapple";

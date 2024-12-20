@@ -6,7 +6,7 @@
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:36:59 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/14 06:51:41 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 09:21:42 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (size && SIZE_MAX / size < nmemb)
 		return (NULL);
 	p = malloc(size * nmemb);
-	if(!p)
+	if (!p)
 		return (NULL);
 	else
 	{

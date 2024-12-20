@@ -6,7 +6,7 @@
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 23:07:34 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/14 00:59:57 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 09:32:36 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 		if (*s == (char)c)
 			return ((char *)s);
 		if (!*s)
-			break;
+			break ;
 		s++;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 21:52:41 by kensei            #+#    #+#             */
-/*   Updated: 2024/12/19 17:32:15 by kensei           ###   ########.fr       */
+/*   Updated: 2024/12/20 09:41:49 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,25 +57,17 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-#include <stdio.h>  // printf
-#include <stdlib.h> // malloc, calloc
-
-// ft_itoa 関数のプロトタイプ宣言
-char *ft_itoa(int n);
-
-// 比較関数（外部関数を使わない）
-int strings_are_equal(const char *s1, const char *s2)
-{
-    while (*s1 && *s2)
-    {
-        if (*s1 != *s2)
-            return 0; // 異なる場合
-        s1++;
-        s2++;
-    }
-    return (*s1 == '\0' && *s2 == '\0'); // 両方が終端文字なら一致
-}
-
+//int strings_are_equal(const char *s1, const char *s2)
+//{
+//    while (*s1 && *s2)
+//    {
+//        if (*s1 != *s2)
+//            return 0; // 異なる場合
+//        s1++;
+//        s2++;
+//    }
+//    return (*s1 == '\0' && *s2 == '\0'); // 両方が終端文字なら一致
+//}
 // テスト関数
 //void test_ft_itoa(int n, const char *expected)
 //{

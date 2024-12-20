@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kensei <kensei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 23:08:07 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/20 09:43:55 by kensei           ###   ########.fr       */
+/*   Created: 2024/12/20 00:07:09 by kensei            #+#    #+#             */
+/*   Updated: 2024/12/20 09:42:55 by kensei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+static void	display_nbr(int n, int fd)
 {
-	size_t	needle_len;
+	if (n >= 10)
+		display_nbr(n / 10, fd);
+	write(fd, &"0123456789"[n % 10], 1);
+}
 
-	needle_len = ft_strlen(needle);
-	if (needle_len == 0)
-		return ((char *)haystack);
-	if (len == 0)
-		return (NULL);
-	while (*haystack && len >= needle_len)
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (fd < 0)
+		return ;
+	if (n == -2147483648)
 	{
-		if (ft_strncmp (haystack, needle, needle_len) == 0)
-			return ((char *)haystack);
-		haystack++;
-		len--;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	return (NULL);
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	display_nbr(n, fd);
 }
