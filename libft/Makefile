@@ -6,7 +6,7 @@
 #    By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 18:15:26 by kensei            #+#    #+#              #
-#    Updated: 2024/12/20 14:58:19 by kenakamu         ###   ########.fr        #
+#    Updated: 2024/12/20 18:08:20 by kenakamu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,12 +71,12 @@ fclean:			clean
 	rm -f $(NAME)
 
 re:				fclean all
+#so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+#	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
+#bonus:
+#	echo "a"
 .PHONY:			all clean fclean re
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
-bonus:
-	echo "a"
