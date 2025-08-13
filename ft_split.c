@@ -6,7 +6,7 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 07:10:42 by kenakamu          #+#    #+#             */
-/*   Updated: 2024/12/20 13:27:16 by kenakamu         ###   ########.fr       */
+/*   Updated: 2025/08/14 01:01:34 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,20 @@ char	**ft_split(char const *s, char c)
 	}
 	p[i] = NULL;
 	return (p);
+}
+
+#include <stdio.h>
+int	main(int arc, char **arv)
+{
+	char	**ptrr;
+	int	i = 0;
+	if (arc == 2)
+	{
+		ptrr = ft_split(arv[1], ' ');
+		while (ptrr[i] != NULL)
+		{
+			printf("%s\n",ptrr[i++]);
+		}
+	}
+	write(1, "\n", 1);
 }

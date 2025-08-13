@@ -6,7 +6,7 @@
 #    By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 18:15:26 by kensei            #+#    #+#              #
-#    Updated: 2024/12/20 18:08:20 by kenakamu         ###   ########.fr        #
+#    Updated: 2025/08/14 02:18:15 by kenakamu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,9 @@ SRCS	= 	ft_isalnum.c \
 						ft_putchar_fd.c	\
 						ft_putstr_fd.c	\
 						ft_putendl_fd.c	\
-						ft_putnbr_fd.c
+						ft_putnbr_fd.c	\
+						additional/split_spht.c
+
 
 
 CC			=	cc

@@ -6,7 +6,7 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:50:32 by kensei            #+#    #+#             */
-/*   Updated: 2024/12/20 14:04:01 by kenakamu         ###   ########.fr       */
+/*   Updated: 2025/08/14 00:53:51 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while(*s)
+	while (*s)
 	{
 		s++;
 		len++;
