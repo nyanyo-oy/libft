@@ -6,13 +6,25 @@
 /*   By: kenakamu <kenakamu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 01:13:34 by kenakamu          #+#    #+#             */
-/*   Updated: 2025/08/14 01:29:16 by kenakamu         ###   ########.fr       */
+/*   Updated: 2025/08/22 14:31:09 by kenakamu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //this function splits str when appear sp&ht and returns it as a split ptrr
 #include <unistd.h>
 #include <stdlib.h>
+
+static void	free_all(char **ptrr)
+{
+	int	i;
+
+	if (!ptrr)
+		return ;
+	i = 0;
+	while (ptrr[i])
+		free (ptrr[i++]);
+	free(ptrr);
+}
 
 static int	ct_words(char	*str)
 {
@@ -50,7 +62,7 @@ static char	*word_dup(char *str, int len)
 	char	*ptr;
 
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (!ptr)
 		return (NULL);
 	i = 0;
 	while (len - i)
@@ -62,7 +74,7 @@ static char	*word_dup(char *str, int len)
 	return (ptr);
 }
 
-static void	fill_words(char **ptrr, char *str)
+static int	fill_words(char **ptrr, char *str)
 {
 	int	i;
 	int	j;
@@ -76,12 +88,15 @@ static void	fill_words(char **ptrr, char *str)
 	{
 		letters = ct_letters(&str[i]);
 		ptrr[j] = word_dup(&str[i], letters);
+		if (!ptrr[j])
+			free_all(ptrr);
 		while (str[i] && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
 			i++;
 		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 			i++;
 		j++;
 	}
+	return (0);
 }
 
 char	**split_spht(char *str)
@@ -93,7 +108,11 @@ char	**split_spht(char *str)
 	ptrr = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!ptrr)
 		return (NULL);
-	fill_words(ptrr, str);
+	if (fill_words(ptrr, str) == -1)
+	{
+		free (ptrr);
+		return (NULL);
+	}
 	ptrr[words] = NULL;
 	return (ptrr);
 }
