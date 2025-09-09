@@ -30,7 +30,7 @@ static int	count_words(char const *s, char c)
 
 static int	getlen(char const *s, char c)
 {
-	char	const *s0 = s;
+	char const	*s0 = s;
 
 	while (*s && *s != c)
 		s++;
@@ -80,18 +80,18 @@ char	**ft_split(char const *s, char c)
 	return (p);
 }
 
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	char	**ptrr;
-	int	i = 0;
-	if (arc == 2)
-	{
-		ptrr = ft_split(arv[1], ' ');
-		while (ptrr[i] != NULL)
-		{
-			printf("%s\n",ptrr[i++]);
-		}
-	}
-	write(1, "\n", 1);
-}
+// #include <stdio.h>
+// int	main(int arc, char **arv)
+// {
+// 	char	**ptrr;
+// 	int	i = 0;
+// 	if (arc == 2)
+// 	{
+// 		ptrr = ft_split(arv[1], ' ');
+// 		while (ptrr[i] != NULL)
+// 		{
+// 			printf("%s\n",ptrr[i++]);
+// 		}
+// 	}
+// 	write(1, "\n", 1);
+// }

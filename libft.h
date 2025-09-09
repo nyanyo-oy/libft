@@ -69,5 +69,4 @@ void			ft_putnbr_fd(int n, int fd);
 
 char			**split_spht(char *str);
 
-
 #endif
