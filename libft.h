@@ -19,6 +19,8 @@
 # include <unistd.h>
 # include <string.h>
 
+# include "printf/ft_printf/ft_printf.h"
+
 typedef struct slist
 {
 	void			*content;
