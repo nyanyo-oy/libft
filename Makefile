@@ -11,8 +11,7 @@
 # **************************************************************************** #
 
 NAME	= 	libft.a
-PRINTF_DIR		=	printf/ft_printf
-PRINTF_LIB	=	$(PRINTF_DIR)/libftprintf.a
+
 
 SRCS	= 	ft_isalnum.c \
 						ft_isdigit.c	\
@@ -56,12 +55,16 @@ SRCS	= 	ft_isalnum.c \
 OBJDIR		=	OBJS
 OBJS		=	$(SRCS:%.c=$(OBJDIR)/%.o)
 
+PRINTF_DIR	=	printf/ft_printf
+PRINTF_LIB	=	$(PRINTF_DIR)/libftprintf.a
+
+HEADERS		=	libft.h
+
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 RM			=	rm -rf
 
 all:			$(NAME)
-
 
 $(NAME): $(OBJS) $(PRINTF_LIB)
 	cp $(PRINTF_LIB) $(NAME)
@@ -70,7 +73,7 @@ $(NAME): $(OBJS) $(PRINTF_LIB)
 $(PRINTF_LIB):
 	$(MAKE) -C $(PRINTF_DIR)
 	
-$(OBJDIR)/%.o: %.c
+$(OBJDIR)/%.o: %.c $(HEADERS)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
