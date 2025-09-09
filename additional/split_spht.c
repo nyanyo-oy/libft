@@ -11,20 +11,7 @@
 /* ************************************************************************** */
 
 //this function splits str when appear sp&ht and returns it as a split ptrr
-#include <unistd.h>
-#include <stdlib.h>
-
-static void	free_all(char **ptrr)
-{
-	int	i;
-
-	if (!ptrr)
-		return ;
-	i = 0;
-	while (ptrr[i])
-		free (ptrr[i++]);
-	free(ptrr);
-}
+#include "../libft.h"
 
 static int	ct_words(char	*str)
 {
@@ -89,7 +76,10 @@ static int	fill_words(char **ptrr, char *str)
 		letters = ct_letters(&str[i]);
 		ptrr[j] = word_dup(&str[i], letters);
 		if (!ptrr[j])
-			free_all(ptrr);
+		{
+			free_ptrr(ptrr);
+			return (-1);
+		}
 		while (str[i] && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
 			i++;
 		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
