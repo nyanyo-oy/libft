@@ -11,6 +11,8 @@
 # **************************************************************************** #
 
 NAME	= 	libft.a
+PRINTF_DIR		=	printf/ft_printf
+PRINTF_LIB	=	$(PRINTF_DIR)/libftprintf.a
 
 SRCS	= 	ft_isalnum.c \
 						ft_isdigit.c	\
@@ -50,35 +52,35 @@ SRCS	= 	ft_isalnum.c \
 
 
 
+OBJDIR		=	OBJS
+OBJS		=	$(SRCS:%.c=$(OBJDIR)/%.o)
+
 CC			=	cc
-
 CFLAGS		=	-Wall -Wextra -Werror
+RM			=	rm -rf
 
-
-#current dir.ver
-OBJS		=	$(SRCS:.c=.o)
 all:			$(NAME)
 
 
-$(NAME):		$(OBJS)
+$(NAME): $(OBJS) $(PRINTF_LIB)
+	cp $(PRINTF_LIB) $(NAME)
 	ar rcs $(NAME) $(OBJS)
-
-#current dir.ver
-%.o: %.c
+	
+$(PRINTF_LIB):
+	$(MAKE) -C $(PRINTF_DIR)
+	
+$(OBJDIR)/%.o: %.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
-fclean:			clean
-	rm -f $(NAME)
+	$(RM) $(OBJDIR)
+	$(MAKE) -C $(PRINTF_DIR) clean
+	
+fclean: clean
+	$(RM) $(NAME)
+	$(MAKE) -C $(PRINTF_DIR) fclean 
 
-re:				fclean all
-#so:
-#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-#	gcc -nostartfiles -shared -o libft.so $(OBJS)
+re: fclean all
 
-#bonus:
-#	echo "a"
-.PHONY:			all clean fclean re
-
-
+.PHONY: all clean fclean re
