@@ -70,5 +70,5 @@ void			ft_putnbr_fd(int n, int fd);
 char			**split_spht(char *str);
 void			free_ptrr(char **ptrr);
 size_t			ft_ptrrlen(char **ptrr);
-
+int				ft_strcmp(const char *s1, const char *s2);
 #endif
