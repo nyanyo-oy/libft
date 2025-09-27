@@ -50,7 +50,10 @@ SRCS	= 	ft_isalnum.c \
 						additional/split_spht.c \
 						free_ptrr.c		\
 						ft_ptrrlen.c	\
-						ft_strcmp.c
+						ft_strcmp.c		\
+						ft_isspace.c	\
+						ft_atof_lite.c		\
+						ft_ascii_to_num.c
 
 
 
