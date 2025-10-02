@@ -89,7 +89,7 @@ static int	fill_words(char **ptrr, char *str)
 	return (0);
 }
 
-char	**split_spht(char *str)
+char	**split_sp_and_ht(char *str)
 {
 	char	**ptrr;
 	int		words;

@@ -68,7 +68,7 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
-char			**split_spht(char *str);
+char			**split_sp_and_ht(char *str);
 void			free_ptrr(char **ptrr);
 size_t			ft_ptrrlen(char **ptrr);
 int				ft_strcmp(const char *s1, const char *s2);

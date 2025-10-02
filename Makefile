@@ -47,7 +47,7 @@ SRCS	= 	ft_isalnum.c \
 						ft_putstr_fd.c	\
 						ft_putendl_fd.c	\
 						ft_putnbr_fd.c	\
-						additional/split_spht.c \
+						additional/split_sp_and_ht.c \
 						free_ptrr.c		\
 						ft_ptrrlen.c	\
 						ft_strcmp.c		\
